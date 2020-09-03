@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.dynatrace.instrumentation'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.dynatrace.tools.android:gradle-plugin:8.197.1.1004'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+dynatrace {
+    configurations {
+        sampleConfig {
+            crashReporting true
+            autoStart {
+                applicationId 'f6360e74-3228-4e40-98ed-65f47f5e983c'
+                beaconUrl 'https://bf76029bnw.bf.dynatrace.com/mbeacon'
+            }
+            debug {
+                agentLogging true
+            }
+            userOptIn true
+        }
+    }
+}
