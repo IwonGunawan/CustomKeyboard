@@ -5,14 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.dynatrace.android.agent.Dynatrace;
-import com.dynatrace.android.agent.conf.Configuration;
 import com.dynatrace.android.agent.conf.DataCollectionLevel;
-import com.dynatrace.android.agent.conf.DynatraceConfigurationBuilder;
 import com.dynatrace.android.agent.conf.UserPrivacyOptions;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,17 +34,16 @@ public class MainActivity extends AppCompatActivity {
                 int result = 1;
                 Dynatrace.modifyUserAction(userAction -> {
                     userAction.setActionName("click custom user action naming");
-                    userAction.reportValue("calculated result", result);
                 });
 
-                Toast.makeText(mContext, "Btn 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Click Btn 1", Toast.LENGTH_SHORT).show();
             }
         });
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Dynatrace.enterAction("btn2");
-                Toast.makeText(mContext, "Btn 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Click Btn 2", Toast.LENGTH_SHORT).show();
             }
         });
         findViewById(R.id.bNext).setOnClickListener(new View.OnClickListener() {
