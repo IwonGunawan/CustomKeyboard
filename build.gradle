@@ -33,13 +33,14 @@ dynatrace {
         sampleConfig {
             crashReporting true
             autoStart {
-                applicationId 'f6360e74-3228-4e40-98ed-65f47f5e983c'
-                beaconUrl 'https://bf76029bnw.bf.dynatrace.com/mbeacon'
+                applicationId '3402c679-43fc-41a0-a1b4-94ba01d4dabf'
+                beaconUrl 'https://bf46808miz.bf.dynatrace.com/mbeacon'
             }
             debug {
                 agentLogging true
             }
-            userOptIn true
+            userOptIn(true)
+            //agentBehavior.startupLoadBalancing(true)
         }
     }
 }
