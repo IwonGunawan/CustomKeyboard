@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        Dynatrace.identifyUser("Pixel XL Api 28 Pie");
+        Dynatrace.identifyUser("Development Device");
     }
 
     public void restart() {
