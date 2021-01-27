@@ -9,7 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
-        classpath 'com.dynatrace.tools.android:gradle-plugin:8.197.1.1004'
+        classpath 'com.dynatrace.tools.android:gradle-plugin:8.+'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -31,6 +31,10 @@ task clean(type: Delete) {
 dynatrace {
     configurations {
         sampleConfig {
+            userActions{
+                enabled true
+                maxDuration 30000
+            }
             crashReporting true
             autoStart {
                 applicationId '3402c679-43fc-41a0-a1b4-94ba01d4dabf'
