@@ -32,8 +32,7 @@ dynatrace {
     configurations {
         sampleConfig {
             userActions{
-                enabled true
-                maxDuration 30000
+                userActions.maxDuration 30000
             }
             crashReporting true
             autoStart {
@@ -44,7 +43,7 @@ dynatrace {
                 agentLogging true
             }
             userOptIn(true)
-            //agentBehavior.startupLoadBalancing(true)
+            agentBehavior.startupLoadBalancing(true)
         }
     }
 }
