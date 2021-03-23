@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        Dynatrace.identifyUser("Development Device");
+        Dynatrace.identifyUser("Dev Device");
     }
 
     public void restart() {
