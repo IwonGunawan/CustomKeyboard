@@ -36,8 +36,8 @@ dynatrace {
             }
             crashReporting true
             autoStart {
-                applicationId '3402c679-43fc-41a0-a1b4-94ba01d4dabf'
-                beaconUrl 'https://bf46808miz.bf.dynatrace.com/mbeacon'
+                applicationId '2b19bd40-27ca-49ae-822f-a8586c5cd4e1'
+                beaconUrl 'https://mzg947.dynatrace-managed.com:9999/mbeacon/57106110-d0fe-4eb0-8c2a-25bd6c47bed6'
             }
             debug {
                 agentLogging true
